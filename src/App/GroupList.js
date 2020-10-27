@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './GroupList.scss';
 
 class GroupList extends Component {
-    getGroupResult = () => {
-        fetch('http://localhost:8080/group', {
+    getGroupList = () => {
+        fetch('http://localhost:8080/groupList', {
             method: "GET",
         })
         .then(response => {
@@ -19,7 +19,7 @@ class GroupList extends Component {
         return (
           <div className="group-list">
             <h1>分组列表</h1>
-            <button className="button-group" onClick={() => this.getGroupResult()}>分组学员</button>
+            <button className="button-group" onClick={() => this.getGroupList()}>分组学员</button>
           </div>
         );
       }
