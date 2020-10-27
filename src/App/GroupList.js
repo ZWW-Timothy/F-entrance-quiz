@@ -18,8 +18,11 @@ class GroupList extends Component {
     render() {
         return (
           <div className="group-list">
-            <h1>分组列表</h1>
-            <button className="button-group" onClick={() => this.getGroupList()}>分组学员</button>
+            <section className="group-list-header">
+                <h1>分组列表</h1>
+                <button onClick={() => this.getGroupList()}>分组学员</button>
+            </section>
+            
           </div>
         );
       }

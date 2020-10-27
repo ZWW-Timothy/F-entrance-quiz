@@ -30,9 +30,11 @@ class MemberList extends Component {
 
     render() {
         return (
-          <div className="group-list">
-            <h1>学员列表</h1>
-            <section>
+          <div className="member-list">
+            <section className="member-list-header">
+                <h1>学员列表</h1>
+            </section>
+            <section className="member-list-body">
                 {this.state.memberList.map((member, index) => (
                     <span className="member" key={index}>
                         {`${this.state.memberList[index].memberId}. ${this.state.memberList[index].memberName}`}
