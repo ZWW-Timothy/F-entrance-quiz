@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './GroupList.scss';
-
+// TODO GTB-工程实践: - 每个组件应该使用一个独立的文件夹把跟这个组件相关的文件包起来
 class GroupList extends Component {
     getGroupList = () => {
         fetch('http://localhost:8080/groupList', {
@@ -8,6 +8,7 @@ class GroupList extends Component {
         })
         .then(response => {
             if (response.status === 200) {
+                // TODO GTB-工程实践: - console.log不应该被提交上去
                 console.log('Success')
             } else {
                 console.log('Fail')
